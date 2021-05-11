@@ -13,13 +13,15 @@ func main() {
 	clargs := os.Args[1:]
 	nums := make([]int, len(clargs))
 
-// Without Error Handling
+// arguments are strings, need to convert them to integers
+	
+// Without Error Handling - sample 1
 
 	for i :=0; i < len(clargs); i++ {
 		nums[i], err =  strconv.Atoi(clargs[i])
 	}
 
-// With Error Handling
+// With Error Handling - sample 2
 
 	for i :=0; i < len(clargs); i++ {
 		if nums[i], err =  strconv.Atoi(clargs[i]); err != nil {
