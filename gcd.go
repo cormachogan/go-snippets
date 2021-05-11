@@ -1,4 +1,6 @@
 // Snippet of code to return the greatest common divisor of 2 numbers
+// The largest positive integer that divides into each of the integers provided
+
 package main
 
 import (
