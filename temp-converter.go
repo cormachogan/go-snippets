@@ -18,12 +18,14 @@ func main() {
 	clargs := os.Args[1:]
 	floats := make([]float64, len(clargs))
 
+//Convert args from strings to floats
 	for j := 0; j < len(clargs); j++ {
 		if floats[j], err = strconv.ParseFloat(clargs[j], 64); err != nil {
 			fmt.Fprintf(os.Stderr, "cf: %v\n", err)
 			os.Exit(1)
 		}
 
+// Do the conversion
 		f := Fahrenheit(floats[j])
 		c := Celsius(floats[j])
 		fmt.Printf("%s = %s, %s = %s\n",
@@ -36,7 +38,6 @@ func CToF(c Celsius) Fahrenheit { return Fahrenheit(c*9/5 + 32) }
 
 // FToC converts a Fahrenheit temperature to Celsius.
 func FToC(f Fahrenheit) Celsius { return Celsius((f - 32) * 5 / 9) }
-
 
 // Method to enable string displays of Celsius
 func (c Celsius) String() string    { return fmt.Sprintf("%g°C", c) }
