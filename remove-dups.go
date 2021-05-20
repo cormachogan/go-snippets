@@ -22,7 +22,7 @@ func main() {
 				os.Exit(0)
 			} else {
 				fmt.Printf("%s has been seen before\n", line)
-		}
+			}
 		}
 	}
 }
